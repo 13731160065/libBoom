@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		523015A629EE49F900A4BA92 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523015A529EE49F900A4BA92 /* CoreGraphics.framework */; };
+		523015A829EE4B3600A4BA92 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523015A729EE4B3600A4BA92 /* UIKit.framework */; };
 		7159BF4D1E2BD41400546890 /* NSArraу.m in Sources */ = {isa = PBXBuildFile; fileRef = 7159BF4C1E2BD41400546890 /* NSArraу.m */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		523015A529EE49F900A4BA92 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		523015A729EE4B3600A4BA92 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/iOSSupport/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		7159BF2C1E2BB5FB00546890 /* libNSArraу.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libNSArraу.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7159BF4B1E2BD41400546890 /* NSArraу.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArraу.h"; sourceTree = "<group>"; };
 		7159BF4C1E2BD41400546890 /* NSArraу.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArraу.m"; sourceTree = "<group>"; };
@@ -33,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				523015A829EE4B3600A4BA92 /* UIKit.framework in Frameworks */,
+				523015A629EE49F900A4BA92 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		523015A429EE49F900A4BA92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				523015A729EE4B3600A4BA92 /* UIKit.framework */,
+				523015A529EE49F900A4BA92 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7159BF231E2BB5FB00546890 = {
 			isa = PBXGroup;
 			children = (
 				7159BF2E1E2BB5FB00546890 /* NSArraу */,
 				7159BF2D1E2BB5FB00546890 /* Products */,
+				523015A429EE49F900A4BA92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,10 +120,11 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7159BF231E2BB5FB00546890;
-			productRefGroup = 7159BF2D1E2BB5FB00546890 /* Products */;
+			productRefGroup = 7159BF231E2BB5FB00546890;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -168,7 +185,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -209,7 +226,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
